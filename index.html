@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUILTY GEAR</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
+</head>
+<body>
+    <button class="bg_btn" onclick="bgchange()">
+Change Background
+    </button>
+    <main class="main">
+        <div class="full">
+               <img src="characterDisplayPlaceholder.png" alt="">
+               <span class="Text">SELECT CHARACTER</span>
+            </div>
+     <div class="pro">
+     </div>
+    </main>
+     
+    <script>
+        let pro1=document.querySelector('.pro')
+        let mainimg=document.querySelector('.full img')
+        let maintext=document.querySelector('.full span')
+let maindata
+
+        fetch('character.json')
+     .then(res => res.json())
+     .then(data => {
+
+        for(let index = 0; index < 28; index++) {
+
+let pro2=document.createElement('div')
+pro1.append(pro2)
+pro2.id= `${index}`
+pro2.innerHTML=`
+    <img src="files/img2/${data.character[index].src}.jpg" id="${index}" onclick="getid(this.id)">
+
+    `
+    }
+    maindata=data
+
+     }
+     )
+  
+     function getid(call){
+mainimg.src=`files/img1/${maindata.character[call].src}.png`
+maintext.innerText=`${maindata.character[call].name}`
+}
+let az = 0
+
+function bgchange(){
+    document.querySelector('body').style.background=`url('files/img3/BG_img(${az}).png')`
+    if(az == 32){
+        az = 0
+    }
+az = az + 1
+}
+
+
+    </script>
+    <style>
+        body{
+    background: url('bg-main.png');
+    background-size: cover;
+    background-color: black;
+    background-repeat: no-repeat;
+}
+@font-face {
+    font-family: 'myfont';
+    src: url('RED.ttf');
+}
+.Text{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'myfont';
+    position: absolute;
+    background-color: rgb(189, 6, 6);
+    color: #ffffff;
+    letter-spacing: 1px;
+    width: 200px;
+    padding: 5px 20px;
+    right:0px;
+    bottom: 10px;
+    font-size: 30px;
+}
+.bg_btn{
+    padding: 10px 20px;
+    font-size: 15px;
+    background: rgba(38,38,38,.5);
+    color: #ffffff;
+    border: solid 1px #fff;
+    border: 20px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 700px;
+    margin-top: 20px;
+}
+.full{
+display: flex;
+position: relative;
+
+}
+.full img{
+    height: 650px;
+}
+.pro{
+     width: 40%;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: rgba(38,38,38,.5);
+    position: absolute;
+    right: 0px;
+}
+.pro img{
+margin: 10px;
+    width: 70px;
+    height: 70px;
+       border: 3px solid #fff ;
+border-radius: 20px;
+}
+
+@media (max-width:1050px) {
+
+    .main{
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+    
+    }
+    .full{
+        margin-right: 0;
+    }
+    .full img{
+        height: 600px;
+    }
+    .pro{
+         width: 100%;
+         margin-left: 0px;
+         margin-right: 0px;
+         position:unset;
+    
+    }
+    .pro img{
+        width: 65px;
+        height: 65px;
+    }
+
+}
+@media (max-width:650px) {
+
+    .full img{
+        height: 550px;
+    }
+    .pro{
+         width: 95%;
+    }
+  
+}
+
+@media (max-width:500px) {
+
+    .full img{
+        height: auto;
+        width: 98%;
+    }
+
+}  
+
+    </style>
+</body>
+</html>

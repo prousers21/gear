@@ -1,0 +1,116 @@
+{
+    "character":[
+        {
+            "name":"A.B.A",
+            "src":"ABA"
+        },
+        {
+            "name":"ANJI MITE",
+            "src":"Anji"
+        },
+        {
+            "name":"ASUKA R#",
+            "src":"Asuka"
+        },
+        {
+            "name":"AXL LOW",
+            "src":"Axl"
+        },
+        {
+            "name":"BAIKEN",
+            "src":"Baiken"
+        },
+        {
+            "name":"BEDMAN",
+            "src":"Bedman"
+        },
+        {
+            "name":"BRIDGET",
+            "src":"Bridget"
+        },
+        {
+            "name":"CHIPP ZANUFF",
+            "src":"Chipp"
+        },
+        {
+            "name":"ELPHELT VALENTINE",
+            "src":"Elphelt"
+        },
+        {
+            "name":"FAUST",
+            "src":"Faust"
+        },
+        {
+            "name":"GIOVANNA",
+            "src":"Giovanna"
+        },
+        {
+            "name":"GOLDLEWIS DICKINSON",
+            "src":"Goldlewis"
+        },
+        {
+            "name":"HAPPY CHAOS",
+            "src":"Happy Chaos"
+        },
+        {
+            "name":"I-NO",
+            "src":"I-No"
+        },
+        {
+            "name":"JACK-O",
+            "src":"Jack-O"
+        },
+        {
+            "name":"JOHNNY",
+            "src":"Johnny"
+        },
+        {
+            "name":"KY KISKE",
+            "src":"Ky"
+        },
+        {
+            "name":"LEO",
+            "src":"Leo"
+        },
+        {
+            "name":"MAY",
+            "src":"May"
+        },
+        {
+            "name":"MILLIA RAGE",
+            "src":"Millia"
+        },
+        {
+            "name":"NAGORIYUKI",
+            "src":"Nagoriyuki"
+        },
+        {
+            "name":"POTEMKIN",
+            "src":"Potemkin"
+        },
+        {
+            "name":"RAMLETHAL VALENTINE",
+            "src":"Ramlethal"
+        },
+        {
+            "name":"SIN KISKE",
+            "src":"Sin"
+        },
+        {
+            "name":"SLAYER",
+            "src":"Slayer"
+        },
+        {
+            "name":"SOL",
+            "src":"Sol"
+        },
+        {
+            "name":"TESTAMENT",
+            "src":"Testament"
+        },
+        {
+            "name":"ZATO",
+            "src":"Zato"
+        }
+    ]
+}
